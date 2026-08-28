@@ -1,0 +1,4 @@
+# Local dev / one-off scripts (scripts/). The Cloud Run Job will get its
+# own requirements.txt once we build the container in a later phase.
+psycopg2-binary==2.9.12
+python-dotenv==1.2.3
