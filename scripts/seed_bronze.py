@@ -71,6 +71,14 @@ NEW_CLIENTES = [
     dict(dui_cliente="09456789-0", nombre="Fátima Beatriz López", telefono="7678-9012", direccion="Barrio San Jacinto, 4a Calle Ote. #17", id_municipio=1),
     dict(dui_cliente="10567890-1", nombre="Ricardo Ernesto Flores", telefono="7789-0123", direccion="Col. Santa Lucía, Av. Central #3", id_municipio=2),
     dict(dui_cliente="11678901-2", nombre="Gabriela Alejandra Cruz", telefono="7890-1235", direccion="Urb. El Rosario, Pje. 2 #9", id_municipio=4),
+    dict(dui_cliente="12789012-3", nombre="Héctor Manuel Vásquez", telefono="7901-2345", direccion="Col. Escalón, Av. Las Magnolias #14", id_municipio=1),
+    dict(dui_cliente="13890123-4", nombre="María Elena Sandoval", telefono="7012-3456", direccion="Res. Las Palmas, Pje. 8 #31", id_municipio=2),
+    dict(dui_cliente="14901234-5", nombre="José Antonio Ramírez", telefono="7123-4567", direccion="Barrio El Calvario, 2a Av. Nte. #5", id_municipio=3),
+    dict(dui_cliente="15012345-6", nombre="Patricia Isabel Gómez", telefono="7234-5678", direccion="Col. Layco, Calle La Mascota #19", id_municipio=1),
+    dict(dui_cliente="16123456-7", nombre="Oscar Armando Peña", telefono="7345-6789", direccion="Urb. Madre Tierra, Pje. 3 #11", id_municipio=4),
+    dict(dui_cliente="17234567-8", nombre="Claudia Marcela Hernández", telefono="7456-8901", direccion="Col. San Benito, Blvd. del Hipódromo #7", id_municipio=1),
+    dict(dui_cliente="18345678-9", nombre="Luis Fernando Aguilar", telefono="7567-9012", direccion="Barrio La Vega, 5a Calle Pte. #28", id_municipio=2),
+    dict(dui_cliente="19456789-0", nombre="Sofía Valentina Martínez", telefono="7678-0123", direccion="Res. Altavista, Pje. 12 #4", id_municipio=3),
 ]
 
 NEW_PEDIDOS = [
@@ -80,6 +88,18 @@ NEW_PEDIDOS = [
     dict(id_pedido=1006, dui_cliente="10567890-1", fecha_pedido=date(2026, 8, 1), estado="cancelado"),
     dict(id_pedido=1007, dui_cliente="11678901-2", fecha_pedido=date(2026, 8, 12), estado="completado"),
     dict(id_pedido=1008, dui_cliente="07234567-8", fecha_pedido=date(2026, 8, 20), estado="pendiente"),
+    dict(id_pedido=1009, dui_cliente="12789012-3", fecha_pedido=date(2026, 8, 22), estado="completado"),
+    dict(id_pedido=1010, dui_cliente="13890123-4", fecha_pedido=date(2026, 8, 23), estado="pendiente"),
+    dict(id_pedido=1011, dui_cliente="14901234-5", fecha_pedido=date(2026, 8, 24), estado="completado"),
+    dict(id_pedido=1012, dui_cliente="15012345-6", fecha_pedido=date(2026, 8, 25), estado="completado"),
+    dict(id_pedido=1013, dui_cliente="16123456-7", fecha_pedido=date(2026, 8, 26), estado="cancelado"),
+    dict(id_pedido=1014, dui_cliente="17234567-8", fecha_pedido=date(2026, 8, 27), estado="completado"),
+    dict(id_pedido=1015, dui_cliente="18345678-9", fecha_pedido=date(2026, 8, 28), estado="pendiente"),
+    dict(id_pedido=1016, dui_cliente="19456789-0", fecha_pedido=date(2026, 8, 28), estado="completado"),
+    dict(id_pedido=1017, dui_cliente="12789012-3", fecha_pedido=date(2026, 8, 29), estado="completado"),
+    dict(id_pedido=1018, dui_cliente="05123456-7", fecha_pedido=date(2026, 8, 29), estado="pendiente"),
+    dict(id_pedido=1019, dui_cliente="13890123-4", fecha_pedido=date(2026, 8, 30), estado="completado"),
+    dict(id_pedido=1020, dui_cliente="09456789-0", fecha_pedido=date(2026, 8, 31), estado="pendiente"),
 ]
 
 NEW_DETALLES = [
@@ -92,6 +112,27 @@ NEW_DETALLES = [
     dict(id_detalle=11, id_pedido=1007, id_producto="PROD-03", cantidad=2, precio=3.50),
     dict(id_detalle=12, id_pedido=1007, id_producto="PROD-08", cantidad=1, precio=2.00),
     dict(id_detalle=13, id_pedido=1008, id_producto="PROD-12", cantidad=3, precio=2.50),
+    # Extra volume for pipeline/monitoring tests (ids 14–33, pedidos 1009–1020).
+    dict(id_detalle=14, id_pedido=1009, id_producto="PROD-01", cantidad=2, precio=1.25),
+    dict(id_detalle=15, id_pedido=1009, id_producto="PROD-15", cantidad=1, precio=1.75),
+    dict(id_detalle=16, id_pedido=1010, id_producto="PROD-08", cantidad=4, precio=2.00),
+    dict(id_detalle=17, id_pedido=1010, id_producto="PROD-03", cantidad=2, precio=3.50),
+    dict(id_detalle=18, id_pedido=1011, id_producto="PROD-12", cantidad=6, precio=2.50),
+    dict(id_detalle=19, id_pedido=1012, id_producto="PROD-01", cantidad=3, precio=1.25),
+    dict(id_detalle=20, id_pedido=1012, id_producto="PROD-08", cantidad=2, precio=2.00),
+    dict(id_detalle=21, id_pedido=1013, id_producto="PROD-15", cantidad=5, precio=1.75),
+    dict(id_detalle=22, id_pedido=1014, id_producto="PROD-03", cantidad=1, precio=3.50),
+    dict(id_detalle=23, id_pedido=1014, id_producto="PROD-12", cantidad=4, precio=2.50),
+    dict(id_detalle=24, id_pedido=1015, id_producto="PROD-01", cantidad=10, precio=1.25),
+    dict(id_detalle=25, id_pedido=1016, id_producto="PROD-08", cantidad=3, precio=2.00),
+    dict(id_detalle=26, id_pedido=1016, id_producto="PROD-15", cantidad=2, precio=1.75),
+    dict(id_detalle=27, id_pedido=1017, id_producto="PROD-03", cantidad=7, precio=3.50),
+    dict(id_detalle=28, id_pedido=1018, id_producto="PROD-12", cantidad=1, precio=2.50),
+    dict(id_detalle=29, id_pedido=1018, id_producto="PROD-01", cantidad=2, precio=1.25),
+    dict(id_detalle=30, id_pedido=1019, id_producto="PROD-08", cantidad=4, precio=2.00),
+    dict(id_detalle=31, id_pedido=1019, id_producto="PROD-03", cantidad=1, precio=3.50),
+    dict(id_detalle=32, id_pedido=1020, id_producto="PROD-15", cantidad=3, precio=1.75),
+    dict(id_detalle=33, id_pedido=1020, id_producto="PROD-12", cantidad=2, precio=2.50),
 ]
 
 
